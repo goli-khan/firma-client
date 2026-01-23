@@ -6,19 +6,19 @@ const Step1 = () => {
 		<>
 			<p>test</p>
 			<input
-				{...register("Companyname", {
+				{...register("CompanyName", {
 					required: "Give this compnay a name that you like",
 				})}
 				type="text"
 				placeholder="give this company a main name"
 			/>
 			<input
-				{...register("AlternativeName")}
+				{...register("alternativeName1")}
 				type="text"
 				placeholder="give this company a main name"
 			/>
 			<input
-				{...register("AlternativeName2")}
+				{...register("alternativeName2")}
 				type="text"
 				placeholder="give this company a main name"
 			/>

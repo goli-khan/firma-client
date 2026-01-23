@@ -7,10 +7,14 @@ export const FormProvider = ({ children }) => {
 	const [currentState, setCurrentState] = useState(1);
 
 	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		password: "",
-		Document: [],
+		CompanyName: "",
+		alternativeName1: "",
+		alternativeName2: "",
+		participants: [],
+		login_name: "",
+		login_surname: "",
+		login_email: "",
+		login_password: "",
 	});
 
 	const next = () => {
@@ -30,6 +34,7 @@ export const FormProvider = ({ children }) => {
 			...prev,
 			...data,
 		}));
+		console.log(formData);
 	};
 
 	const value = { currentState, next, prev, updateForm, formData };
