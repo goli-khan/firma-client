@@ -11,7 +11,9 @@ const Country = () => {
 	};
 	const handleNext = () => {
 		console.log(Country);
-		if (Country) navigate(`/${Country}`);
+		if (Country === "usa" || Country === "poland") navigate(`/${Country}`);
+		if (Country === "other")
+			navigate("/login", { state: { country: "other" } });
 	};
 
 	return (

@@ -8,6 +8,7 @@ import Other from "../Pages/Other.jsx";
 import NewCompany from "../Pages/NewCompany.jsx";
 import Review from "../Components/Review.jsx";
 import Fuck from "../Pages/Fuck.jsx";
+import Thank from "../Pages/Thank.jsx";
 
 const routes = [
 	{
@@ -16,7 +17,7 @@ const routes = [
 		isPrivate: false,
 	},
 	{
-		path: "/country",
+		path: "/:country",
 		element: <Country />,
 		isPrivate: false,
 	},
@@ -65,7 +66,11 @@ const routes = [
 		element: <Billing />,
 		isPrivate: false,
 	},
-	{},
+	{
+		path: "/thank",
+		element: <Thank />,
+		isPrivate: false,
+	},
 	{},
 	{},
 	{},

@@ -38,7 +38,9 @@ const Review = () => {
 				);
 			})}
 			<button onClick={() => navigate(-1)}>Back</button>
-			<button onClick={() => navigate("/login")}>Submit</button>
+			<button onClick={() => navigate("/login", { state: { country: "usa" } })}>
+				Next
+			</button>
 		</div>
 	);
 };
