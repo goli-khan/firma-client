@@ -26,7 +26,6 @@ const App = () => {
 						)}
 					</Routes>
 				</main>
-				<Footer />
 			</FormProvider>
 		</>
 	);

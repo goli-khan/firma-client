@@ -58,11 +58,11 @@ const NewCompany = () => {
 					<div>{currentState === 1 && <Step1 />}</div>
 					<div>{currentState === 2 && <Step2 />}</div>
 					<div>{currentState === 3 && <Step3 />}</div>
+					<button type="button" className="" onClick={handleBack}>
+						Back
+					</button>
 					<button type="button" onClick={handleNext}>
 						{currentState >= 3 ? <p>Submit</p> : <p>Next</p>}
-					</button>
-					<button type="button" onClick={handleBack}>
-						Back
 					</button>
 				</form>
 			</FormProvider>
