@@ -26,11 +26,10 @@ const Usa = () => {
 					<button
 						className={`
       p-2 rounded-tr-3xl mr-1 transition-colors duration-200
-      ${
-				side === "sulzby"
-					? "bg-white text-black" // active = prominent (white)
-					: "bg-[#4b4f4d] text-gray-300"
-			} // inactive = muted/darker
+      ${side === "sulzby"
+								? "bg-white text-black" // active = prominent (white)
+								: "bg-[#4b4f4d] text-gray-300"
+							} // inactive = muted/darker
     `}
 						onClick={() => setSide("sulzby")}
 					>
@@ -39,11 +38,10 @@ const Usa = () => {
 					<button
 						className={`
       p-2 rounded-tr-3xl transition-colors duration-200
-      ${
-				side === "info"
-					? "bg-white text-black" // active = prominent (white)
-					: "bg-[#4b4f4d] text-gray-300"
-			} // inactive = muted
+      ${side === "info"
+								? "bg-white text-black" // active = prominent (white)
+								: "bg-[#4b4f4d] text-gray-300"
+							} // inactive = muted
     `}
 						onClick={() => setSide("info")}
 					>
@@ -76,7 +74,7 @@ const Usa = () => {
 						)}
 					</div>
 
-					<div className="my-4 flex gap-4 justify-end w-[20%]">
+					<div className="my-4 flex gap-4 justify-end ">
 						<button
 							className=""
 							onClick={() => {
@@ -86,7 +84,7 @@ const Usa = () => {
 							Back
 						</button>
 						<button
-							className="bg-yellow-400 text-black p-3 rounded-2xl disabled:cursor-not-allowed disabled:opacity-50"
+							className="bg-yellow-400 text-black px-5 py-2 rounded-2xl disabled:cursor-not-allowed disabled:opacity-50"
 							disabled={!City}
 							onClick={() => {
 								Country ? navigate(`/ ${Country} / ${City}  `) : navigate(`/*`);

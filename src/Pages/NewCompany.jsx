@@ -51,19 +51,30 @@ const NewCompany = () => {
 		updateForm(data);
 		if (currentState >= 3) navigate("/review");
 	};
+
 	return (
 		<>
 			<FormProvider {...methods}>
 				<form onSubmit={methods.handleSubmit(onSubmit)}>
-					<div>{currentState === 1 && <Step1 />}</div>
-					<div>{currentState === 2 && <Step2 />}</div>
-					<div>{currentState === 3 && <Step3 />}</div>
-					<button type="button" className="" onClick={handleBack}>
-						Back
-					</button>
-					<button type="button" onClick={handleNext}>
-						{currentState >= 3 ? <p>Submit</p> : <p>Next</p>}
-					</button>
+					<div>
+						{currentState === 1 && (
+							<Step1 onNext={handleNext} onBack={handleBack} />
+						)}
+					</div>
+					<div>
+						{currentState === 2 && (
+							<Step2 onNext={handleNext} onBack={handleBack} />
+						)}
+					</div>
+					<div>
+						{currentState === 3 && (
+							<Step3
+								onNext={handleNext}
+								onBack={handleBack}
+								isLastStep={currentState >= 3}
+							/>
+						)}
+					</div>
 				</form>
 			</FormProvider>
 		</>

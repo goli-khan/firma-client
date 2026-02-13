@@ -9,43 +9,81 @@ const Sulzby = () => {
 	return (
 		<>
 			<div className="flex flex-col ">
-				<div className="bg-[#2b2f2e] p-4 border-b border-black ">
-					<ul>
-						<li>
-							sum is simply dummy text of the printing and typesetting industry.
-							Lorem Ipsum has been the industry's standard dummy text ever since
-							the 1500s, when an unknown printer took a galley of type and
-							scrambled it to make a type specimen book. It has survived not
-							only five centuries, but also the leap into electronic
-							typesetting, remaining essentially unchanged. It was popularised
-							in the 1960s with the release of Letraset sheets containing Lorem
-							Ipsum passages, and more recently with desktop publishing software
-							like Aldus PageMaker including versions of Lorem
+				<div className="bg-[#2b2f2e] p-4 border-b border-black flex flex-col gap-4 rounded-tr-4xl ">
+					<span className="border-b w-[40%]"> Obsah zvolenej Sulzby: </span>
+					<ul className="space-y-3">
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							one
 						</li>
-						<li>
-							sum is simply dummy text of the printing and typesetting industry.
-							Lorem Ipsum has been the industry's standard dummy text ever since
-							the 1500s, when an unknown printer took a galley of type and
-							scrambled it to make a type specimen book. It has survived not
-							only five centuries, but also the leap into electronic
-							typesetting, remaining essentially unchanged. It was popularised
-							in the 1960s with the release of Letraset sheets containing Lorem
-							Ipsum passages, and more recently with desktop publishing software
-							like Aldus PageMaker including versions of Lorem
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							two
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							three
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							four
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							five
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							six
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							seven
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							eigth
+						</li>
+						<li className="flex items-center gap-3">
+							<span className="w-6 h-6 flex items-center justify-center border border-yellow-500 text-yellow-500 rounded-full text-sm">
+								✓
+							</span>
+							nine
 						</li>
 					</ul>
 				</div>
-				<label className="bg-[#2b2f2e] p-4 border-b border-black">
+				<p className="bg-[#2b2f2e] p-4 pb-0 ">Doplnkove Sulzby</p>
+				<label className="bg-[#2b2f2e] p-4 border-b border-black flex items-center gap-3 cursor-pointer rounded-bl-4xl">
 					<input
+						className="appearance-none w-4 h-4 border-2 border-gray-500 bg-transparent checked:bg-blue-500 checked:border-blue-500 relative clip-octagon"
 						type="checkbox"
 						checked={isChecked}
 						onChange={handleCheckbox}
 					/>
-					Accpet term and conditions
+					Vytvorenie USA firemnje online prezentacie (web stranka, domena, logo)
 				</label>
 				<div className="flex justify-end ">
 					<span className="bg-[#2b2f2e] p-3 border-black border-b text-right ">
-						Cena: <span>{isChecked ? value - 40 : value}</span>
+						Cena:{" "}
+						<span className="text-yellow-500 font-bold">
+							{isChecked ? value - 40 : value}₤
+						</span>
 					</span>
 				</div>
 			</div>

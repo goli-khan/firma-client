@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 
-const Step3 = () => {
+const Step3 = ({ onNext, onBack, isLastStep }) => {
 	const { register, watch } = useFormContext();
 	const isSkipped = watch("skipDocu");
 	const participants = watch("participants");
@@ -49,6 +49,12 @@ const Step3 = () => {
 				<input type="checkbox" {...register("skipDocu")} />
 				Upload id later
 			</label>
+			<button type="button" onClick={onBack}>
+				Back
+			</button>
+			<button type="button" onClick={onNext}>
+				{isLastStep ? "Submit" : "Next"}
+			</button>
 		</>
 	);
 };
